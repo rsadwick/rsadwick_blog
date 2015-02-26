@@ -1,2 +1,2 @@
 # rsadwick_blog
-mah Pelican blog
+mah Pelican blog config and theme
