@@ -39,8 +39,9 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-.container-test {
-  background: #ff9908;
+
+.top-bar-section ul li {
+  border-right: 12px dotted $secondary-color;
 }
 
 #subscription {
@@ -114,6 +115,10 @@
   & p{
     font-size: $medium-font-size;
   }
+}
+
+.post-info{
+  padding: 1em;
 }
 
 .blood-of-the-lamb {

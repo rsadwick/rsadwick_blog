@@ -6,6 +6,9 @@ Tags: christian, jesus
 Slug: god
 Authors: Ryan Sadwick
 Summary: Short version for index and feeds
+Image: //s3.amazonaws.com/img.jnkbows.com/cache/5d/8f/5d8f353434284360ba5aaf3d677f11b3.jpg
+
+![MyImage](//s3.amazonaws.com/img.jnkbows.com/cache/5d/8f/5d8f353434284360ba5aaf3d677f11b3.jpg)
 
 # Dillinger
 

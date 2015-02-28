@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Ryan Sadwick'
-SITENAME = u'Get Your Joy Here'
+SITENAME = "ryan's blog"
 SITEURL = ''
 
 PATH = 'content'
@@ -26,10 +26,13 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-BIBLE_VERSES = (('You can add links in your config file', 'Col 2:34'),
-          ('Another social link', 'Mark 5:1-5'),)
+BIBLE_VERSES = (('Now glory be to God!  By his mighty power at work within usm he is able to accomplish infinitely more than we should ever dare to ask or hope.', 'Ephesians 3:20'),
+          ("Follow only what is good.  Remember that those who do good prove that they are God's children, and those who do evil prove that they do not know God.", '3 John 11'),
+          ("God has given gifts to each of you from his great variety of spiritual gifts.  Manage them well so that God's generosity can flow through you.", "1 Peter 4:10"),
+          ("So let us come boldly to the throne of our gracious God.  There we will receive his mercy, and we will find grace to help us when we need it.", "Hebrews 4:16"),)
 
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+ASSET_DEBUG = None

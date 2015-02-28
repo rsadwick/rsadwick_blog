@@ -37,10 +37,17 @@
           title="{{ SITENAME }} Tags RSS Feed"/>
     {% endif %}
 
+    {% if ASSET_DEBUG %}
+
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/app.css"/>
-     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick.css"/>
-     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick-theme.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="//s3.amazonaws.com/rsadwick/css/ryan.min.css"/>
+
+    {% endif %}
 
 
     {% endblock head %}
@@ -52,7 +59,7 @@
         <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
             <ul class="title-area">
                 <li class="name">
-                    <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+                    <h1><a href="{{ SITEURL }}/"><i class="orange fa fa-coffee fa"></i> {{ SITENAME }}</a></h1>
                 </li>
 
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -156,11 +163,11 @@
             <h3>Howdy Social Networks</h3>
             <p>Stop by and share</p>
             <ul class="inline-list left">
+                <li><a href="https://github.com/rsadwick" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
                 <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
-                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a></li>
-                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-steam fa-2x"></i></a></li>
-                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
-                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                <li><a href="https://www.pinterest.com/rsadwick/" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a></li>
+                <li><a href="http://steamcommunity.com/id/rsadwick" target="_blank"><i class="fa fa-steam fa-2x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/rsadwick" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
 
             </ul>
 
@@ -179,10 +186,17 @@
 
 </footer>
 
+{% if ASSET_DEBUG %}
 <script src="{{ SITEURL }}/theme/js/libs/jquery.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/libs/foundation.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/app.js"></script>
 <script src="{{ SITEURL }}/theme/js/libs/slick/slick.min.js"></script>
+
+{% else %}
+<script src="//s3.amazonaws.com/rsadwick/js/ryan.min.js"></script>
+
+{% endif %}
+
 {% include 'analytics.html' %}
 </body>
 </html>
