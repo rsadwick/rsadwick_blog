@@ -26,8 +26,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+BIBLE_VERSES = (('You can add links in your config file', 'Col 2:34'),
+          ('Another social link', 'Mark 5:1-5'),)
 
 DEFAULT_PAGINATION = 5
 

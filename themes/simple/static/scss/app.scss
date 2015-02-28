@@ -45,7 +45,7 @@
 
 #subscription {
   background: $caribic-brown;
-  padding: 3em 0 1em 0;
+  padding: 2em 0 1em 0;
 
   h2, h3, h4, h5, h6 {
     color: $white;
@@ -102,13 +102,29 @@
   }
 }
 
+.orange{
+  color: $secondary-color;
+}
+
+.published{
+  font-size: $small-font-size;
+}
+
+.entry-content{
+  & p{
+    font-size: $medium-font-size;
+  }
+}
+
 .blood-of-the-lamb {
   color: $alert-color;
 }
 
 .welcome-mat {
   font-weight: 900;
-  color: $secondary-color;
+  letter-spacing: 0.7em;
+  text-transform: uppercase;
+  padding: 0 0 0.7em 0;
 }
 
 #holy-word {
@@ -156,11 +172,31 @@
 footer.footer-base {
   background: $primary-color;
   color: $white;
+  padding: 2em;
+
+  h2, h3, h4, h5, h6{
+    color: $white;
+  }
+
+  p{
+    font-size: $medium-font-size;
+  }
 
   a {
-    color: $secondary-color
+    color: $daylight;
+
   }
   a:hover {
-    color: $daylight;
+    color: $caribic-brown;
   }
+
+  .inline-list{
+    a{
+      font-size: $small-font-size;
+    }
+    a:hover{
+      font-size: $small-font-size;
+    }
+  }
+
 }

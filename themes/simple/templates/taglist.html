@@ -1,0 +1,2 @@
+{% if article.tags %} <i class="fa fa-tags fa"></i> {% for tag in article.tags %}<a class="secondary round radius label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> {% endfor %}{% endif %}
+{% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">get the pdf</a>{% endif %}

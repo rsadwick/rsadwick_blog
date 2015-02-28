@@ -17,26 +17,9 @@
 
 {% block content %}
 <section id="content" class="body">
-  <header class="page-header">
-    <h2 class="entry-title">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
- {% import 'translations.html' as translations with context %}
- {{ translations.translations_for(article) }}
-  </header>
-  <footer class="post-info">
-     <span class="secondary round radius label">{{ article.locale_date }}</span>
-    {% if article.authors %}
 
-      {% for author in article.authors %}
-          <a class="brown round radius label" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %}
-
-
-    {% endif %}
-  </footer><!-- /.post-info -->
   <div class="entry-content">
-
+    {% include 'article_infos.html' %}
     {{ article.content }}
   </div><!-- /.entry-content -->
 </section>

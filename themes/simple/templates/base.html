@@ -38,6 +38,8 @@
     {% endif %}
 
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/app.css"/>
+     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick.css"/>
+     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick-theme.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
@@ -60,22 +62,22 @@
                 <!-- Left Nav Section -->
                 <ul class="left">
                     {% for title, link in MENUITEMS %}
-                        <li><a href="{{ link }}">{{ title }}</a></li>
+                    <li><a href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                            {% for p in PAGES %}
-                                <li
-                                {% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title
-                                }}</a></li>
-                            {% endfor %}
-                        {% else %}
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                            {% for cat, null in categories %}
-                                <li
-                                {% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat
-                                }}</a></li>
-                            {% endfor %}
-                        {% endif %}
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                    <li
+                    {% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title
+                    }}</a></li>
+                    {% endfor %}
+                    {% else %}
+                    {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                    <li
+                    {% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat
+                    }}</a></li>
+                    {% endfor %}
+                    {% endif %}
                     {% endif %}
                 </ul>
             </section>
@@ -91,64 +93,96 @@
     </div>
 </div>
 
+
+{% if BIBLE_VERSES %}
+
+
 <div id="holy-word">
-    <div class="row">
-        <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
+    <div class="row bible-verses">
+
+        {% for verse, book in BIBLE_VERSES %}
+            <div><blockquote>{{ verse }}<cite>{{ book }}</cite></blockquote></div>
+        {% endfor %}
+
     </div>
 </div>
 
+{% endif %}
+
+
 <div id="subscription">
     <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup" class="row">
-        <form action="//ryansadwick.us10.list-manage.com/subscribe/post?u=e3eefc160fbed517db71eb0f9&amp;id=5aab482b5e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup" class="row">
+        <form action="//ryansadwick.us10.list-manage.com/subscribe/post?u=e3eefc160fbed517db71eb0f9&amp;id=5aab482b5e"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+              target="_blank" novalidate>
 
+            <div class="large-12 columns">
+                <div class="row collapse">
 
-                <div class="large-4 columns">
-                 <h5> <i class="fa fa-paper-plane fa-2x"></i> Subscribe to our mailing list</h5>
+                    <div class="small-2 large-2 columns">
+                        <span class="prefix"> <i class="fa fa-paper-plane fa"></i> stay connected </span>
+                    </div>
+
+                    <div class="small-7 columns">
+                        <input type="email" value=""
+                               placeholder="Enter your email to subscribe to my monthly newsletter." name="EMAIL"
+                               class="required email"
+                               id="mce-EMAIL">
+
+                        <div id="mce-responses">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                            <div style="position: absolute; left: -5000px;"><input type="text"
+                                                                                   name="b_e3eefc160fbed517db71eb0f9_5aab482b5e"
+                                                                                   tabindex="-1" value=""></div>
+                        </div>
+                    </div>
+                    <div class="small-3 columns">
+
+                        <input type="submit" value="go" name="subscribe"
+                               id="mc-embedded-subscribe" class="button postfix">
+                    </div>
                 </div>
-                <div class="large-6 columns">
-                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                     <div id="mce-responses">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;"><input type="text" name="b_e3eefc160fbed517db71eb0f9_5aab482b5e" tabindex="-1" value=""></div>
-                </div>
-
-
-
-             <div class="large-2 columns"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-
+            </div>
         </form>
-
-
-        <!--End mc_embed_signup-->
-        </div>
+    </div>
 </div>
 
 <footer class="footer-base">
-        <div class="row">
-            <div class="large-6 columns">
-                <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                </address>
-                <!-- /#about -->
-            </div>
-            <div class="large-6 columns">
-                <ul class="inline-list right">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                </ul>
-            </div>
+    <div class="row">
+        <div class="large-8 columns">
+
+            <h3>Howdy Social Networks</h3>
+            <p>Stop by and share</p>
+            <ul class="inline-list left">
+                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a></li>
+                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-steam fa-2x"></i></a></li>
+                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+
+            </ul>
+
+            <hr>
+            <i class="blood-of-the-lamb fa fa-heart fa alert"></i> Proudly powered by <a href="http://getpelican.com/" target="_blank">Pelican</a>,
+            which takes great advantage of <a href="http://python.org" target="_blank">Python</a>. <i class="blood-of-the-lamb fa fa-heart fa alert"></i>
         </div>
+        <div class="large-4 columns">
+            <ul class="inline-list right">
+                <li><a href="http://www.howtomakedisciplesthatmakedisciples.com/">Disciples</a></li>
+                <li><a href="#">Copyright Notice</a></li>
+
+            </ul>
+        </div>
+    </div>
 
 </footer>
 
 <script src="{{ SITEURL }}/theme/js/libs/jquery.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/libs/foundation.min.js"></script>
 <script src="{{ SITEURL }}/theme/js/app.js"></script>
+<script src="{{ SITEURL }}/theme/js/libs/slick/slick.min.js"></script>
+{% include 'analytics.html' %}
 </body>
 </html>

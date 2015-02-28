@@ -6,7 +6,7 @@
         <h2 class="welcome-mat">Welcome</h2>
         <h4>I <i class="blood-of-the-lamb fa fa-heart fa alert"></i> Jesus and I'm a <i class="fa fa-star fa"></i> Father,  <i class="fa fa-gamepad fa"></i> Gamer</kbd>, <i class="fa fa-gear fa"></i> Programmer</h4>
 
-        <div id="ryan-callout"><a href="#" class="button round">Who Am I?</a></div>
+        <div id="ryan-callout"><a href="#" class="button round">Want to know more?</a></div>
 </header>
 {% endblock %}
 
@@ -16,7 +16,7 @@
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
                 <footer class="post-info">
-                    <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+                    <i class="orange fa fa-clock-o fa"></i>  <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
 
                 </footer>
                 <div class="entry-content"> {{ article.summary }} </div>
@@ -24,6 +24,8 @@
 {% endfor %}
         </ul>
 </div>
+
+
 {% include 'pagination.html' %}
 </section>
 {% endblock content %}

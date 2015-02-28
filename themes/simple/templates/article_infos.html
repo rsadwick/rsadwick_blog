@@ -1,0 +1,24 @@
+
+ <header class="page-header">
+    <h2 class="entry-title">
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+ {% import 'translations.html' as translations with context %}
+ {{ translations.translations_for(article) }}
+  </header>
+  <footer class="post-info">
+      <i class="fa fa-clock-o fa"></i> <span class="secondary round radius label">{{ article.locale_date }}</span>
+    {% if article.authors %}
+
+      {% for author in article.authors %}
+            <i class="fa fa-user fa"></i> <a class="brown round radius label" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+        {% endfor %}
+
+
+    {% endif %}
+
+      {% include 'taglist.html' %}
+
+  </footer>
+
+
