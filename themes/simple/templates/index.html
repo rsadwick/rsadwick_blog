@@ -2,25 +2,28 @@
 {% block content %}
 <section id="content">
 {% block content_title %}
-<h2>All articles sup</h2>
+<header class="index-header">
+        <h2 class="welcome-mat">Welcome</h2>
+        <h4>I <i class="blood-of-the-lamb fa fa-heart fa alert"></i> Jesus and I'm a <i class="fa fa-star fa"></i> Father,  <i class="fa fa-gamepad fa"></i> Gamer</kbd>, <i class="fa fa-gear fa"></i> Programmer</h4>
+
+        <div id="ryan-callout"><a href="#" class="button round">Who Am I?</a></div>
+</header>
 {% endblock %}
-ggllglglglg
-<ol id="post-list">
+
+<div id="post-list" class="homepage-content">
+    <ul>
 {% for article in articles_page.object_list %}
         <li><article class="hentry">
                 <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
                 <footer class="post-info">
                     <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
-                    <address class="vcard author">By
-                    {% for author in article.authors %}
-                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                    {% endfor %}
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+
+                </footer>
+                <div class="entry-content"> {{ article.summary }} </div>
         </article></li>
 {% endfor %}
-</ol><!-- /#posts-list -->
+        </ul>
+</div>
 {% include 'pagination.html' %}
-</section><!-- /#content -->
+</section>
 {% endblock content %}

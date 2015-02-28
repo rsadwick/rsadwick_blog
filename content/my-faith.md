@@ -1,4 +1,11 @@
-Title: About
+Title: My Faith
+Date: 2015-02-27 10:20
+Modified: 2015-02-27 19:30
+Category: Jesus
+Tags: christian, jesus
+Slug: god
+Authors: Ryan Sadwick
+Summary: Short version for index and feeds
 
 # Dillinger
 

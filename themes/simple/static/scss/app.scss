@@ -1,0 +1,166 @@
+@import "settings";
+@import "foundation";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+.container-test {
+  background: #ff9908;
+}
+
+#subscription {
+  background: $caribic-brown;
+  padding: 3em 0 1em 0;
+
+  h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+}
+
+#mc_embed_signup {
+
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+}
+
+.page-header {
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+  text-align: center;
+  margin: 5em 0 2em 0;
+  padding: 1em;
+}
+
+.index-header {
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+  text-align: center;
+  margin: 5em 0 2em 0;
+  padding: 3em 0 1em 0
+}
+
+.page-content {
+  text-align: left;
+  margin-bottom: 32px;
+  padding: 1em 0;
+  margin: 3em;
+  padding: 1em;
+}
+
+.homepage-content {
+  text-align: center;
+  margin: 3em;
+  padding: 1em;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.brown {
+  background: $caribic-brown;
+  & a {
+    color: $white;
+  }
+  & a:hover {
+    color: $daylight;
+  }
+}
+
+.blood-of-the-lamb {
+  color: $alert-color;
+}
+
+.welcome-mat {
+  font-weight: 900;
+  color: $secondary-color;
+}
+
+#holy-word {
+  background: $secondary-color;
+  color: $white;
+
+  $blockquote-font-color: scale-color($secondary-color, $lightness: 95%);
+  $blockquote-padding: rem-calc(12 20 12 19);
+  $blockquote-border: 5px dotted $caribic-brown;
+  $blockquote-cite-font-size: rem-calc(13);
+  $blockquote-cite-font-color: scale-color($secondary-color, $lightness: 95%);
+  $blockquote-cite-link-color: $blockquote-cite-font-color;
+
+  blockquote {
+    margin: 0 0 $paragraph-margin-bottom;
+    padding: $blockquote-padding;
+    border-#{$default-float}: $blockquote-border;
+
+    cite {
+      display: block;
+      font-size: $blockquote-cite-font-size;
+      color: $blockquote-cite-font-color;
+      &:before {
+        content: "\2014 \0020";
+      }
+
+      a,
+      a:visited {
+        color: $blockquote-cite-link-color;
+      }
+    }
+  }
+  blockquote,
+  blockquote p {
+    line-height: $paragraph-line-height;
+    color: $blockquote-font-color;
+  }
+
+}
+
+#ryan-callout {
+  padding: 2em;
+}
+
+footer.footer-base {
+  background: $primary-color;
+  color: $white;
+
+  a {
+    color: $secondary-color
+  }
+  a:hover {
+    color: $daylight;
+  }
+}
