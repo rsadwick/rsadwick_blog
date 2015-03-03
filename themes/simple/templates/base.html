@@ -37,7 +37,7 @@
           title="{{ SITENAME }} Tags RSS Feed"/>
     {% endif %}
 
-    {% if ASSET_DEBUG %}
+    {% if ASSET_DEBUG == True %}
 
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/app.css"/>
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/slick.css"/>
@@ -118,8 +118,11 @@
 
 
 <div id="subscription">
-    <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup" class="row">
+        <div class="row sub-cta">
+            <h3> <i class="fa fa-link fa"></i> Get Connected</h3>
+            <p>Every week I send an encouraging message.  You won't find any sales pitches - only being real and doing life together.</p>
+        </div>
         <form action="//ryansadwick.us10.list-manage.com/subscribe/post?u=e3eefc160fbed517db71eb0f9&amp;id=5aab482b5e"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
               target="_blank" novalidate>
@@ -133,7 +136,7 @@
 
                     <div class="small-7 columns">
                         <input type="email" value=""
-                               placeholder="Enter your email to subscribe to my monthly newsletter." name="EMAIL"
+                               placeholder="Enter your email to subscribe." name="EMAIL"
                                class="required email"
                                id="mce-EMAIL">
 
@@ -161,7 +164,7 @@
         <div class="large-8 columns">
 
             <h3>Howdy Social Networks</h3>
-            <p>Stop by and share</p>
+            <p>Stop by and share.</p>
             <ul class="inline-list left">
                 <li><a href="https://github.com/rsadwick" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
                 <li><a href="https://www.twitter.com/rsadwick" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
@@ -186,15 +189,14 @@
 
 </footer>
 
-{% if ASSET_DEBUG %}
-<script src="{{ SITEURL }}/theme/js/libs/jquery.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/libs/foundation.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/app.js"></script>
-<script src="{{ SITEURL }}/theme/js/libs/slick/slick.min.js"></script>
+{% if ASSET_DEBUG == True %}
+    <script src="{{ SITEURL }}/theme/js/libs/jquery.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/libs/foundation.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/app.js"></script>
+    <script src="{{ SITEURL }}/theme/js/libs/slick/slick.min.js"></script>
 
 {% else %}
-<script src="//s3.amazonaws.com/rsadwick/js/ryan.min.js"></script>
-
+    <script src="//s3.amazonaws.com/rsadwick/js/ryan.min.js"></script>
 {% endif %}
 
 {% include 'analytics.html' %}
