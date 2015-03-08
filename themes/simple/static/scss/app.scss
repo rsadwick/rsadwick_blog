@@ -39,7 +39,6 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-
 .top-bar-section ul li {
   border-right: 1px solid $secondary-color;
 }
@@ -52,11 +51,11 @@
     color: $white;
   }
 
-  .sub-cta{
+  .sub-cta {
     text-align: center;
     color: $white;
 
-    p{
+    p {
       font-size: 1.2rem;
     }
   }
@@ -90,6 +89,11 @@
   padding: 1em 0;
   margin: 3em;
   padding: 1em;
+
+  & h6 {
+    text-align: center;
+  }
+
 }
 
 .homepage-content {
@@ -112,21 +116,21 @@
   }
 }
 
-.orange{
+.orange {
   color: $secondary-color;
 }
 
-.published{
+.published {
   font-size: $small-font-size;
 }
 
-.entry-content{
-  & p{
+.entry-content {
+  & p {
     font-size: $medium-font-size;
   }
 }
 
-.post-info{
+.post-info {
   padding: 1em;
 }
 
@@ -188,11 +192,11 @@ footer.footer-base {
   color: $white;
   padding: 2em;
 
-  h2, h3, h4, h5, h6{
+  h2, h3, h4, h5, h6 {
     color: $white;
   }
 
-  p{
+  p {
     font-size: $medium-font-size;
   }
 
@@ -204,11 +208,11 @@ footer.footer-base {
     color: $caribic-brown;
   }
 
-  .inline-list{
-    a{
+  .inline-list {
+    a {
       font-size: $small-font-size;
     }
-    a:hover{
+    a:hover {
       font-size: $small-font-size;
     }
   }

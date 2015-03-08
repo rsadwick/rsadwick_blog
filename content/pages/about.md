@@ -13,6 +13,8 @@ I serve Jesus, I'm a husband and father.  I'm a software engineer that enjoys de
 There came a point in my life where the life where I was surrounded by dead ends.  I realized that this culture leads
 us down a path that breaks us but never builds us back up.  It leads us into debt with no relief.
 
+######![bible](//s3.amazonaws.com/rsadwick/img/bible.jpg)
+
 Being a follower of Christ and servant to my church changed the way I live - I'm never going back.  The blessing and storms
 I've received has molded me into the Christian Warrior I am today: **Through it all**, my eyes are on You.
 
