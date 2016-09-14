@@ -18,6 +18,8 @@ us down a path that breaks us but never builds us back up.  It leads us into deb
 Being a follower of Christ and servant to my church changed the way I live - I'm never going back.  The blessing and storms
 I've received has molded me into the Christian Warrior I am today: **Through it all**, my eyes are on You.
 
+######![praying](//s3.amazonaws.com/rsadwick/img/praying.jpg)
+
 > Don't copy the behavior and customs of this world,
 > but let God transform you into a new person by changing
 > the way you think.
